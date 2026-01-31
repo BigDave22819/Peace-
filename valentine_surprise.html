@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Valentine</title>
+<style>
+  body { text-align:center; font-family:'Arial'; background-color:#fff0f5; margin:0; padding:50px; overflow:hidden; }
+  h1 { font-size:40px; color:#d63384; }
+  p { font-size:24px; color:#ff1493; }
+  img { width:300px; border-radius:20px; margin-top:20px; box-shadow:0 0 20px rgba(255,105,180,0.5); animation:bounce 2s infinite; }
+  @keyframes bounce { 0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);} }
+  .heart { position:absolute; font-size:24px; color:#ff1493; animation: floatUp 4s linear infinite; }
+  @keyframes floatUp {0%{transform:translateY(0px);opacity:1;}100%{transform:translateY(-500px);opacity:0;}}
+</style>
+</head>
+<body>
+<h1>Yay! You said YES, Lafiyah! ❤️</h1>
+<p>I'm so lucky to have you in my life 💕</p>
+<img src="placeholder.jpg" alt="Lafiyah">
+<audio autoplay loop><source src="placeholder_music.mp3" type="audio/mpeg"></audio>
+<script>
+function createHeart(){const heart=document.createElement('div');heart.classList.add('heart');heart.style.left=Math.random()*window.innerWidth+'px';heart.style.fontSize=(20+Math.random()*30)+'px';heart.innerText='❤️';document.body.appendChild(heart);setTimeout(()=>heart.remove(),4000);}
+setInterval(createHeart,300);
+</script>
+</body>
+</html>
